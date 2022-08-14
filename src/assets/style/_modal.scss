@@ -1,0 +1,599 @@
+//modal registration
+.modal-content-form {
+  position: relative;
+  max-width: 50%;
+  // width: 550px;
+  // height: 100%;
+  background: $white;
+  border-radius: 20px;
+  .modal-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    .content-form {
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+      width: 550px;
+      background: $white;
+      position: relative;
+      border-radius: 20px;      
+      .modal-tabs {        
+        .nav {
+          display: flex;
+          .nav-item {
+            width: 50%;
+            // padding: 14px 5px;
+            text-align: center;
+            background-color: $bg-tabs;
+            border-radius: 20px 20px 0 0;
+            cursor: pointer;
+            height: 50px;
+            &:nth-child(1) {
+              border-radius: 20px 0 0 0;
+            }
+            &:nth-child(2) {
+              border-radius: 0 20px 0 0;
+            }
+            .nav-link {
+              color: $black;
+              font-size: 20px;
+              height: 100%;
+              height: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+          .active {
+            background-color: $white;
+            border-bottom: 0;
+            border-radius: 20px 20px 0 0;
+          }
+        }
+        .tab-body {
+          padding: 40px 60px 30px 60px;
+          height: 450px;
+          overflow-y: scroll;
+          &::-webkit-scrollbar-track {
+            // background-color: $bg-tabs;
+            background-color: transparent;
+            border-radius: 5px;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: transparent;
+            // background-color: $active-dots;
+          }
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+          .input-filds {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+            .fild-pass {
+              display: flex;
+              input[type="password"] {
+                // position: relative;
+                width: 100%;
+              }
+              .fa-eye,
+              .fa-eye-slash {
+                margin-right: -20px;
+                cursor: pointer;
+                color: $active-dots;
+              }
+            }
+            input {
+              border: 0;
+              outline: none;
+              border-bottom: 1px solid $active-dots;
+              width: 100%;
+              &::placeholder {
+                font-size: 14px;
+                color: $active-dots;
+              }
+              &:nth-child(1) {
+                margin-bottom: 30px;
+              }
+            }
+            p {
+              color: $active-dots;
+              line-height: 1.6em;
+              margin-top: 17px;
+            }
+            .invalid {
+              margin-top: -27px;
+              color: $red;
+            }
+          }
+          .remember {
+            display: flex;
+            justify-content: space-between;
+            &__me {
+              input {
+                display: none;
+              }
+              label {
+                position: relative;
+                cursor: pointer;
+                margin-left: 25px;
+                &::before {
+                  display: block;
+                  content: "";
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 5px;
+                  border: 1px solid $active-dots;
+                  position: absolute;
+                  top: 0;
+                  left: -27px;
+                }
+                span {
+                  color: $bg-blue;
+                }
+              }
+              input:checked + label:after {
+                display: block;
+                content: "\2b24";
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                background-color: $pink;
+                position: absolute;
+                top: 0;
+                left: -27px;
+                color: $white;
+                font-size: 12px;
+                text-align: center;
+                line-height: 21px;
+              }
+            }
+            .remind {
+              p {
+                color: $bg-blue;
+              }
+            }
+          }
+          .btn-enter {
+            margin: 27px 0 42px 0;
+            .enter {
+              width: 300px;
+              padding: 10px 10px;
+              background-color: $pink;
+              border-radius: 15px;
+              color: $white;
+              align-items: center;
+              font-size: 20px;
+              font-weight: 900;
+              border: 0;
+              outline: none;
+              margin: auto;
+              display: block;
+            }
+          }
+          .social-registr {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            p {
+              font-size: 12px;
+              color: $active-dots;
+            }
+            .social-registr-block {
+              margin-top: 10px;
+              display: flex;
+              align-items: center;
+              .facebook-icon {
+                margin-right: 15px;
+              }
+            }
+          }
+          .input-filds-registration {
+            .input-group {
+              margin-top: 0;
+            }
+            input {
+              &::placeholder {
+                color: $active-dots;
+              }
+            }
+            .remember-d {
+              &__me {
+                input {
+                  display: none;
+                }
+                label {
+                  position: relative;
+                  cursor: pointer;
+                  margin-left: 25px;
+                  &::before {
+                    display: block;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    border: 1px solid $active-dots;
+                    position: absolute;
+                    top: 0;
+                    left: -27px;
+                  }
+                  .link-personal {
+                    color: $bg-blue;
+                    &:hover {
+                      color: $bg-blue;
+                    }
+                  }
+                }
+                input:checked + label:after {
+                  display: block;
+                  content: "\2b24";
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 5px;
+                  background-color: $pink;
+                  position: absolute;
+                  top: 0;
+                  left: -27px;
+                  color: $white;
+                  font-size: 12px;
+                  text-align: center;
+                  line-height: 21px;
+                }
+              }
+            }
+          }
+        }
+        .close {
+          position: absolute;
+          top: -30px;
+          right: -8px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: $white;
+          opacity: 1;
+          border: 0;
+          outline: none;
+          span {
+            color: $black;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//modal cart
+.modal-content-cart {
+  max-width: 738px;
+  height: 100%;
+  .modal-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    .block-second {
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+      width: 738px;
+      // width: 100%;
+      padding: 32px 29px;
+      background: $white;
+      position: relative;
+      border-radius: 20px;
+      margin: 60px 0;
+      min-height: 300px;
+      overflow-y: scroll;
+      max-height: 600px;
+      &::-webkit-scrollbar-track {
+        // background-color: $bg-tabs;
+        background-color: transparent;
+        border-radius: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: transparent;
+        // background-color: $active-dots;
+      }
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      .out-card {
+        display: flex;
+        padding-bottom: 42px;
+        background-color: transparent;
+        // border-bottom: 1px solid $active-dots;
+        p {
+          font-size: 20px;
+          &:nth-child(2) {
+            margin: auto;
+          }
+        }
+      }
+      .card-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 0;
+        border-bottom: 1px solid $active-dots;
+        position: relative;
+        .image-text {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .photo-img {
+            margin-right: 20px;
+            width: 70px;
+            height: 125px;
+            display: flex;
+            align-items: center;
+            &__block {
+              img {
+                width: 100%;
+                max-height: 120px;
+                height: auto;
+              }
+            }
+          }
+          .text {
+            width: 180px;
+            color: $bg-blue;
+          }
+          .fa-trash-alt {
+            color: $active-dots;
+            cursor: pointer;
+          }
+        }
+        .number {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 20px;
+          margin-left: 5px;
+          &__left {
+            display: flex;
+            align-items: center;
+            .minus,
+            .plus {
+              display: block;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              color: $white;
+              background-color: $bg-blue;
+            }
+            .numb {
+              margin: 0 10px;
+              font-weight: 900;
+            }
+            .price {
+              font-family: $ptSans;
+              font-weight: 400;
+              margin-right: 20px;
+              span {
+                margin-right: 5px;
+                font-size: 12px;
+                display: inline-block;
+              }
+            }
+            .all-price {
+              font-family: $ptSans;
+              font-weight: 900;
+              margin-left: 20px;
+              // margin-right: 30px;
+              span {
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+        .fa-trash-alt {
+          position: absolute;
+          top: 18px;
+          right: 0;
+          font-size: 12px;
+          color: $active-dots;
+          cursor: pointer;
+        }
+      }
+      .all-sum {
+        margin-top: 10px;
+        .remove-all-card {
+          text-align: center;
+          cursor: pointer;
+          .remove-all {
+            font-size: 14px;
+            color: $white;
+            background-color: $bg-blue;
+            opacity: 0.7;
+            width: 150px;
+            display: block;
+            margin: auto;
+          }
+        }
+        .code-sale {
+          display: flex;
+          // justify-content: space-between;
+          justify-content: flex-end;
+          align-items: baseline;
+          .code {
+            display: flex;
+            flex-wrap: wrap;
+            .promcode {
+              width: 80px;
+              border-bottom: 1px solid $active-dots;
+              outline: none;
+              border-top: 0;
+              border-right: 0;
+              border-left: 0;
+              margin-right: 10px;
+              &::placeholder {
+                font-size: 14px;
+                color: $active-dots;
+              }
+            }
+            a {
+              color: $bg-blue;
+              text-decoration: underline;
+              text-decoration-color: $bg-blue;
+              text-decoration-style: dashed;
+              margin-right: 20px;
+            }
+            p {
+              color: $active-dots;
+              font-size: 14px;
+              font-weight: 600;
+              span {
+                font-family: $ptSans;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+        .to-pay {
+          font-weight: 600;
+          &__text {
+            font-size: 20px;
+            span {
+              font-family: $ptSans;
+              font-weight: 600;
+              font-size: 30px;
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+      .call-me-check {
+        display: flex;
+        margin-top: 30px;
+        .not-call-me {
+          font-size: 14px;
+          color: $active-dots;
+        }
+        input {
+          display: none;
+        }
+        label {
+          position: relative;
+          cursor: pointer;
+          margin-left: 25px;
+          &::before {
+            display: block;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid $active-dots;
+            position: absolute;
+            top: -2px;
+            left: -27px;
+          }
+        }
+        input:checked + label:after {
+          display: block;
+          content: "\2b24";
+          width: 20px;
+          height: 20px;
+          border-radius: 5px;
+          background-color: $pink;
+          position: absolute;
+          top: -2px;
+          left: -27px;
+          color: $white;
+          font-size: 12px;
+          text-align: center;
+          line-height: 21px;
+        }
+      }
+      .draw-up {
+        display: block;
+        width: 270px;
+        margin: auto;
+        &__btn {
+          margin-top: 20px;
+          width: 270px;
+          height: 40px;
+          background: $pink;
+          border-radius: 15px;
+          margin-bottom: 15px;
+          a {
+            display: block;
+            color: $white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: 900;
+          }
+        }
+        &__text {
+          text-align: center;
+          font-size: 10px;
+          line-height: 1.4em;
+          a {
+            color: $black;
+          }
+          span {
+            color: $bg-blue;
+            text-decoration: underline;
+          }
+        }
+        &__modal {
+          text-align: center;
+          .text {
+            color: $bg-blue;
+            cursor: pointer;
+          }
+        }
+      }
+      .modal-close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $white;
+        opacity: 1;
+        border: 0;
+        outline: none;
+        span {
+          color: $black;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .modal-wrap-block {
+    position: inherit;
+    background: transparent;
+  }
+}

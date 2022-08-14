@@ -1,0 +1,40 @@
+stages:
+  - build
+  - deploy_prod
+
+
+.deploy_job_template: &deploy_docker
+  script:
+    - cd $PROJ_PATH
+    - docker-compose pull
+    - docker-compose up -d
+
+
+build:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE .
+    - docker push $CI_REGISTRY_IMAGE
+#  when: manual
+
+
+deploy_prod:
+  stage: deploy_prod
+  dependencies:
+    - build
+  variables:
+    PROJ_PATH: /var/www/sellpoint
+    GIT_DEPTH: 10
+    BRANCH: "master"
+ # when: manual
+  <<: *deploy_docker
+  only:
+    - master
+  tags:
+    - vueprod

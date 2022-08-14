@@ -1,0 +1,28 @@
+.about {
+  padding: 40px 0 100px 0;
+  &__title {
+    margin-bottom: 20px;
+    &_title {
+      font-weight: 600;
+      font-size: 26px;
+    }
+  }
+  &__text {
+    margin-bottom: 30px;
+    &_title {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    &_text {
+      display: flex;
+      text-align: justify;
+      span {
+        color: $bg-blue;
+        margin-left: 5px;
+      }
+    }
+  }
+  .mb {
+    margin: 0;
+  }
+}

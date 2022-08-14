@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Vector_x5F_sprite_x5F_all" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="350px" height="130px" viewBox="0 0 350 130" enable-background="new 0 0 350 130" xml:space="preserve">
+<symbol  id="_x34_04_1_" viewBox="-175 -65 350 130">
+	<path fill="#595959" d="M-102.004-19L-102,65h-13l-60-84v-15h57v-31h16v31h17v15H-102.004z M-118-19h-41l41,58V-19z"/>
+	<g>
+		<path fill="#E31837" d="M2-65c-35.841,0-65,29.159-65,65s29.159,65,65,65S67,35.841,67,0S37.841-65,2-65z M2,61
+			c-33.636,0-61-27.364-61-61s27.364-61,61-61S63-33.636,63,0S35.636,61,2,61z"/>
+		<path fill="#E31837" d="M-19,15c0-2.761-2.239-5-5-5s-5,2.239-5,5s2.239,5,5,5S-19,17.761-19,15z"/>
+		<path fill="#E31837" d="M32,15c0-2.761-2.239-5-5-5s-5,2.239-5,5s2.239,5,5,5S32,17.761,32,15z"/>
+		<polygon fill="#E31837" points="28,-28 -25,-28 -25,-25 28,-25 		"/>
+	</g>
+	<path fill="#595959" d="M157.996-19L158,65h-13L85-19v-15h57v-31h16v31h17v15H157.996z M142-19h-41l41,58V-19z"/>
+	<polygon display="none" fill="none" points="-175,65 175,65 175,-65 -175,-65 	"/>
+</symbol>
+<g id="_x34_04">
+
+		<use xlink:href="#_x34_04_1_"  width="350" height="130" x="-175" y="-65" transform="matrix(1 0 0 -1 175 65)" overflow="visible"/>
+</g>
+</svg>

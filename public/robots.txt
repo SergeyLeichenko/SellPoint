@@ -1,0 +1,15 @@
+User-Agent: *
+
+Disallow: /cgi-bin
+Disallow: /search/full/
+Disallow: /profile/*
+Disallow: /order/*
+Disallow: /https://sellpoint.com.ua/contacts
+Disallow: /https://sellpoint.com.ua/profile
+Disallow: /https://sellpoint.com.ua/about-us
+Disallow: /https://sellpoint.com.ua/exchange
+Disallow:/delivery
+Disallow:/cooperation
+Disallow: /https://sellpoint.com.ua/profile
+
+Sitemap: http://side.sellpoint.com.ua/sitemap.xml
